@@ -55,6 +55,29 @@ triangulation, there are some attacks that allow the alteration of the position.
 
 %picture triangulation
 
+Triangulation works by measuring the time it takes a signal to propagate
+to different antennas.
+Given a sufficient amount of antennas,
+it is possible to determine where the signal was emitted,
+by finding the point where the distanceradius corss. 				%TODO write it better!
+This method can be used,
+for example to track cellphones.	%TODO Zeit.de VDS Daten
+Triangulation is widely used but one has to keep in mind,
+that it soley determines the postion where the signal was emitted.
+This position must not be the position wehere the signal has been generated in the first place.
+It is important to rember that it is quite easy to catch
+a certain signal and relay it to some other place.
+
+Relay attacks work by this scheme.
+The Attacker has two devices,
+that are somehow connected.
+A receiving device allows the attacker to catch the signal where it is generated.
+The receiving device just captures the signal and
+without any alteration the signal is send to the second device.
+This device is used to emit the signal again,
+at the location desired by the attacker.
+Now the attacker can postion the signal where wants it.
+
 In wireless security these attacks are know as ``Wormhole-Attack''.
 They use the same underlying mechanisms, as the attacks on PKE Systems.
 
