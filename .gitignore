@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 report.pdf
 *.swp
 *.aux
@@ -27,3 +28,33 @@ report.pdf
 *.maf
 *.mtc
 *.mtc0
+=======
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.toc
+*.vrb
+*.maf
+*.mtc
+*.mtc0
+*.pdf
+>>>>>>> 7bbac97db287fe6242969f956e82f4f35f62c8e4
