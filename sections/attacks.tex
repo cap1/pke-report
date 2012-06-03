@@ -15,15 +15,35 @@
 	This method has been practically tested on different PKE systems by %TODO \citea{} %DER Artikel
 	The authors showed that it is an eqsy and feasible attack.
 	It also does not require very specialized hard- or software and
-	the requiret components can be easily aquired with a relatively small budget.
-	The attack circumvents the cryptography involved in locking and
-	operating the car by simple not touching it.
+	the required components can be easily aquired with a relatively small budget.
+	The relay attack is transarparent to any higher layer cryptography,	%transport layer?
+	and so can easily circumvent the security systems of most PKE systems.
 
 \subsubsection*{Variants}
+	There are some variants in attacking PKE systems.
+	Altough the attack could be in principle be carried out by one attacker alone,
+	the literature usually asumes at leats two attackers.
+
 %two thieves
+	Having two attackers performing a relay attack,
+	the roles are split.
+	The first thievs will try to get close to the victim and place
+	the sending device close to the victims CID.
+	This could take place in a store,
+	where it doesnt raise attention to the victim if the attacker
+	is in range of the CID.
+	The second thieve will be near the car,
+	probably parked on the stores own carlot,
+	to capture its probing signals.
+
+	Now the signals are relayed between the CID and the car,
+	and the car might open and start,
+	allowing the second thieve to drive away.
+
 %three thieves
 \subsubsection*{Material \& Methods}
-%describe what materials where 
+%describe what materials where
+%describe methods hwo to relate the signals, cable and wireless and its implications
 
 \subsubsection*{Results}
 %results francillion et al. achieved with real world cars
