@@ -25,27 +25,66 @@
 	the literature usually asumes at leats two attackers.
 
 %two thieves
-	\label{par:twoThies}
+	\label{par:twoThieves}
 	Having two attackers performing a relay attack,
 	the roles are split.
-	The first thievs will try to get close to the victim and place
+	The first thieves will try to get close to the victim and place
 	the sending device close to the victims CID.
 	This could take place in a store,
 	where it doesnt raise attention to the victim if the attacker
 	is in range of the CID.
-	The second thieve will be near the car,
+	The second thief will be near the car,
 	probably parked on the stores own carlot,
 	to capture its probing signals.
 
 	Now the signals are relayed between the CID and the car,
 	and the car might open and start,
-	allowing the second thieve to drive away.
+	allowing the second thiee to drive away.
 
 %three thieves
 \subsubsection*{Material \& Methods}
-	This Section referes to the approach of \citeauthor{relayAttacksFranc}
+	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
+	and the tested approaches by the authors.
+
 	%describe methods hwo to relate the signals, cable and wireless and its implications
 	%describe what materials where
+%Over the Cable
+	\begin{figure*}[htb]
+		\begin{center}
+			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_wire.png}
+		\end{center}
+		\caption{Relay wih antennas, cable and amplifiers \citep[p. 5]{relayAttacksFranc}.}
+		\label{fig:relayOTC}
+	\end{figure*}
+
+	Relay  attacks on PKE systems can be carried out in different ways.
+	In the most simple case,
+	a cable is used to relay the transmitted LF signal from the car near the CID.
+	An Amplifier might be needed to keep the signal stron enough.
+	The keys UHF sender is strong enough so that the car will receive the send out signals.
+	This case is shown in Figure %\ref{fig:relayByCalbe} %TODO create graphics
+	Amplifiers might be nesscessary deping on the length of the cable,
+	the quality of the antennas and the strength of the signal.
+
+%Over the air
+	\begin{figure*}[htb]
+		\begin{center}
+			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_air.png}
+		\end{center}
+		\caption{Relay over-the-air with up- and downconversion and amplifiers \citep[p. 6]{relayAttacksFranc}.}
+		\label{fig:relayOTA}
+	\end{figure*}
+	A cable is rather impractical to relay the signal.
+	\citeauthor{relayAttacksFranc} used upconversion and downconversion to realy the signal.
+	The 130 kHz signal transimetted by the car is amplified and upconverted to a 2.5 GHz signal.
+	This signal is send out to a 2.5 GHz antenna and downmodulated to 130 KHz again.
+	Amplifiers are used as required by signal strength and quality.
+	The conversion steps are down analog,
+	to ensure a fast conversion rate.
+	Also this keeps the attack simple and inexpensive.
+	Figure \ref{fig:relayOTA} show the layout of the Relay over-the-air attack.
+
+%Cars
 	\citeauthor{relayAttacksFranc} acqiured 10 distinct car models that have been build by 8 different manufacturers.
 	The cars were from different types,
 	there were \$sedans, \$SUVs, \$sportscars  and \$sedans.
@@ -62,7 +101,7 @@
 	The Authors were able to succesfully carry the attack out to various number of cars.
 	They aquired 10 different car models from 8 manufacturers.
 	These models were tested if they were vulnerable against the two thieves attack as described in 
-	Section \ref{par:twoThievs}.
+	Section \ref{par:twoThieves}.
 	\citeauthor{relayAttacksFranc} were able to excite the CID from ranges up to 8 meters
 	and therefore open the car altough the car was more than 50 meters away.
 
