@@ -12,12 +12,12 @@
 	Now the attacker can enter the car and again relay the signals emitted by the
 	car so that he can ignite the engine.
 	
-	This method has been practically tested on different PKE systems by %TODO \citea{} %DER Artikel
-	The authors showed that it is an eqsy and feasible attack.
+	This method has been practically tested on different PKE systems by \cite{relayAttacksFranc}. %TODO \citea{} %DER Artikel
+	The authors show that it is an easy and feasible attack.
 	It also does not require very specialized hard- or software and
 	the required components can be easily aquired with a relatively small budget.
 	The relay attack is transarparent to any higher layer cryptography,	%transport layer?
-	and so can easily circumvent the security systems of most PKE systems.
+	and so it can easily circumvent the security systems of most PKE systems.
 
 \subsubsection*{Variants}
 	There are some variants in attacking PKE systems.
@@ -46,15 +46,13 @@
 	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
 	and the tested approaches by the authors.
 
-	%describe methods hwo to relate the signals, cable and wireless and its implications
-	%describe what materials where
 %Over the Cable
 	\begin{figure*}[htb]
 		\begin{center}
 			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_wire.png}
 		\end{center}
 		\caption{Relay wih antennas, cable and amplifiers \citep[p. 5]{relayAttacksFranc}.}
-		\label{fig:relayOTC}
+		\label{fig:relayOTW}
 	\end{figure*}
 
 	Relay  attacks on PKE systems can be carried out in different ways.
@@ -62,7 +60,7 @@
 	a cable is used to relay the transmitted LF signal from the car near the CID.
 	An Amplifier might be needed to keep the signal stron enough.
 	The keys UHF sender is strong enough so that the car will receive the send out signals.
-	This case is shown in Figure %\ref{fig:relayByCalbe} %TODO create graphics
+	This case is shown in Figure \ref{fig:relayOTW}.
 	Amplifiers might be nesscessary deping on the length of the cable,
 	the quality of the antennas and the strength of the signal.
 
@@ -83,6 +81,8 @@
 	to ensure a fast conversion rate.
 	Also this keeps the attack simple and inexpensive.
 	Figure \ref{fig:relayOTA} show the layout of the Relay over-the-air attack.
+	The Materials required for the over the air attack are rather cheap,
+	an a device cloud be build for 
 
 %Cars
 	\citeauthor{relayAttacksFranc} acqiured 10 distinct car models that have been build by 8 different manufacturers.
@@ -118,18 +118,16 @@
 	The more security relevant ECUs are connected via a priviledged,
 	high-speed bus,
 	where less important ones use a seperate lower-speed bus.
-	These bus-systems should be strictly seperate as specified in the standard. %TODO cite standard for OMB bla
+	These bus-systems should be strictly seperate as specified in the standard. %TODO cite standard for OMB-II
 	Seperating the communication of the brakes and windscreenwipers,
 	shall ensure that the integral systems keep working,
 	when it is acceptable that less important ones can fail.
 
-	However the article form \citeauthor{expModernAuto} %TODO CITE!
+	However the article form \citeauthor{expModernAuto}
 	shows that these security features and the standards were not implemented as intended.
-	%TODO \citea{}
-	point out what can be done if access to the to the electronic bus system can be achieved.
+	\citeauthor{expModernAuto} show what can be done if access to the electronic bus system can be achieved.
 	They were able to cut the engine and the engage single brakes,
 	even while driving.
-	%TODO \citea{}
-	point out that it is not possible to traceback certain attacks.	%verify that
+	\citeauthor{expModernAuto} point out that it is not possible to traceback certain attacks.	%verify that
 
 	%what harm can occur from gaining unnotices acces to the vehicle

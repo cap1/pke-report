@@ -12,7 +12,6 @@ all: $(PDF) $(GNUPLOT) $(INKSCAPE)
 
 nobib:
 	pdflatex --halt-on-error --output-directory=./tmp ./report.tex
-	pdflatex --halt-on-error --output-directory=./tmp ./report.tex
 	mv ./tmp/report.pdf .
 
 evince:
