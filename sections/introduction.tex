@@ -8,78 +8,78 @@ This enhanced security of cars and the ease of use,
 but also introduced security problems.
 
 \subsection*{Evolution of car keys}
-The Customer Identification Devices hast changed a lot in car history.
-Starting from physical keys,
-the access can be enforced now by electronics only.
+	The Customer Identification Devices hast changed a lot in car history.
+	Starting from physical keys,
+	the access can be enforced now by electronics only.
 
-In the late 1990s, immobilisers have been introduced into car security.
-In addition to a mechanical key, 
-they incorporate an electronic device in the keys fob.
-This device communicates with the cars electronics,
-to prevent the "hot-wiring" of the car,
-after physical access to the cabin has been achieved.
-The strength of the immobilisers was increased with more sophisticated cryptography.
-Early models used simple checks against values stored in the cars electronic control unit (ECU).
-The strength of immobilisers was increased by incorporating more
-sophisticated cryptography,
-that can withstand replay-attacks.	%explain replay?
+	In the late 1990s, immobilisers have been introduced into car security.
+	In addition to a mechanical key, 
+	they incorporate an electronic device in the keys fob.
+	This device communicates with the cars electronics,
+	to prevent the "hot-wiring" of the car,
+	after physical access to the cabin has been achieved.
+	The strength of the immobilisers was increased with more sophisticated cryptography.
+	Early models used simple checks against values stored in the cars electronic control unit (ECU).
+	The strength of immobilisers was increased by incorporating more
+	sophisticated cryptography,
+	that can withstand replay-attacks.	%explain replay?
 
-Remote keyless entry systems feature a key that can send out a signal,
-which opens the car if its sensor is in range.
-These system usually only unlock the vehicles doors,
-and the authorization to start the engine is sill enforced by a physical key
-which may incorporate an immobiliser.
-These remote keyless entry systems work similar to immobiliser with a radio interface.
-Likewise cryptography has to be applied to prevent replay attacks.
+	Remote keyless entry systems feature a key that can send out a signal,
+	which opens the car if its sensor is in range.
+	These system usually only unlock the vehicles doors,
+	and the authorization to start the engine is sill enforced by a physical key
+	which may incorporate an immobiliser.
+	These remote keyless entry systems work similar to immobiliser with a radio interface.
+	Likewise cryptography has to be applied to prevent replay attacks.
 
-Passive keyless entry (PKE) system omit the button.
-They listen on a certain frequency for a message from the vehicle
-and reply if the message fits to initiate an authentication.
-When the authentication succeeds, the vehicle will unlock its doors.
-Now the Customer does not have to press any buttons,
-and will be able to enter the car without interaction 
-if the identification device is close enough.
-The customer identification device usually integrates a backup key,
-to allow access when the battery is drained.
+	Passive keyless entry (PKE) system omit the button.
+	They listen on a certain frequency for a message from the vehicle
+	and reply if the message fits to initiate an authentication.
+	When the authentication succeeds, the vehicle will unlock its doors.
+	Now the Customer does not have to press any buttons,
+	and will be able to enter the car without interaction 
+	if the identification device is close enough.
+	The customer identification device usually integrates a backup key,
+	to allow access when the battery is drained.
 
-This enhances the comfort but also introduces some security relevant aspects.
-The vehicles security systems now have to be hardened
-to withstand attacks on the localization of the key.
-As the proximity of the key defines when the car is accessible and when not. 
+	This enhances the comfort but also introduces some security relevant aspects.
+	The vehicles security systems now have to be hardened
+	to withstand attacks on the localization of the key.
+	As the proximity of the key defines when the car is accessible and when not. 
 
 \subsection*{Relayattacks}
-These security problems introduced by PKE base on the problem of proper
-localization in wireless networks.
-Although it seems intuitive that the position of devices can be calculated by
-triangulation, there are some attacks that allow the alteration of the position.
+	These security problems introduced by PKE base on the problem of proper
+	localization in wireless networks.
+	Although it seems intuitive that the position of devices can be calculated by
+	triangulation, there are some attacks that allow the alteration of the position.
 
-%picture triangulation
+	%picture triangulation
 
-Triangulation works by measuring the time it takes a signal to propagate
-to different antennas.
-Given a sufficient amount of antennas,
-it is possible to determine where the signal was emitted,
-by finding the point where the distanceradius corss. 				%TODO write it better!
-This method can be used,
-for example to track cellphones.	%TODO Zeit.de VDS Daten
-Triangulation is widely used but one has to keep in mind,
-that it soley determines the postion where the signal was emitted.
-This position must not be the position wehere the signal has been generated in the first place.
-It is important to rember that it is quite easy to catch
-a certain signal and relay it to some other place.
+	Triangulation works by measuring the time it takes a signal to propagate
+	to different antennas.
+	Given a sufficient amount of antennas,
+	it is possible to determine where the signal was emitted,
+	by finding the point where the distanceradius corss. 				%TODO write it better!
+	This method can be used,
+	for example to track cellphones.	%TODO Zeit.de VDS Daten
+	Triangulation is widely used but one has to keep in mind,
+	that it soley determines the postion where the signal was emitted.
+	This position must not be the position wehere the signal has been generated in the first place.
+	It is important to rember that it is quite easy to catch
+	a certain signal and relay it to some other place.
 
-%from wormhole attacks to relay attacks
-Relay attacks work by this scheme.
-The Attacker has two devices,
-that are somehow connected.
-A receiving device allows the attacker to catch the signal where it is generated.
-The receiving device just captures the signal and
-without any alteration the signal is send to the second device.
-This device is used to emit the signal again,
-at the location desired by the attacker.
-Now the attacker can postion the signal where want to.
+	%from wormhole attacks to relay attacks
+	Relay attacks work by this scheme.
+	The Attacker has two devices,
+	that are somehow connected.
+	A receiving device allows the attacker to catch the signal where it is generated.
+	The receiving device just captures the signal and
+	without any alteration the signal is send to the second device.
+	This device is used to emit the signal again,
+	at the location desired by the attacker.
+	Now the attacker can postion the signal where want to.
 
-In wireless security these attacks are know as ``Wormhole-Attack''.
-%TODO give some example here
+	In wireless security these attacks are know as ``Wormhole-Attack''.
+	%TODO give some example here
 
-They use the same underlying mechanisms, as the attacks on PKE Systems.
+	They use the same underlying mechanisms, as the attacks on PKE Systems.
