@@ -43,6 +43,7 @@
 
 %three thieves
 \subsubsection*{Material \& Methods}
+	\label{sec:matmet}
 	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
 	and the tested approaches by the authors.
 
@@ -85,29 +86,48 @@
 	an a device cloud be build for 
 
 %Cars
-	\citeauthor{relayAttacksFranc} acqiured 10 distinct car models that have been build by 8 different manufacturers.
+	\citeauthor{relayAttacksFranc} acqiured 10 distinct car models that have been build by 8 different manufacturers,
+	to test the raly attack in practice.
 	The cars were from different types,
 	there were \$sedans, \$SUVs, \$sportscars  and \$sedans.
 	They also tested \$aftermarket PKE-systems.
-	The authors tested the relay attack in \$different settings.
-
-	Firstofall the authors tested the attack using a wired connection,
-	to relay the CID and the vehicle.
-
-	The authors also used a wireless aproach to establish a link between the CID and the vehicle.
+	The authors tried to attack these ten systems with both,
+	the over-the-air and the over-the-cable attack.
 
 \subsubsection*{Results}
 	%results francillion et al. achieved with real world cars
 	The Authors were able to succesfully carry the attack out to various number of cars.
-	They aquired 10 different car models from 8 manufacturers.
 	These models were tested if they were vulnerable against the two thieves attack as described in 
 	Section \ref{par:twoThieves}.
 	\citeauthor{relayAttacksFranc} were able to excite the CID from ranges up to 8 meters
 	and therefore open the car altough the car was more than 50 meters away.
 
+%relay distance cable
+	All of the Cars could be opened and started using the relay over-the-cable attacks in a range of 7 Meters.
+	Except for one model,
+	all cars could be driven away with altough the CID was 30 meters away.
+	If the signals were relayed 60m,
+	six out of ten cars could opened and started.
+	Three of these six did not require an amplification of the signal.
+%relay distance CID antenna
+
+
 \subsection*{Implications}
+% "The Supermarket"
 	\label{sec:attackImplications}
-	Gaining access to a vehicle as great implications for the overall security of a car.
+	Relay attacks can be carried out by very simple devices,
+	and can be succesfully applied.
+	A typical scenario could be on a supermarket car lot.
+	Two thieves steal a car locked by a PKE system.
+	The owner carries his CID into the supermarket where the first thief gets close to him.
+	Using the devices described in Section \ref{sec:matmet} as relay-over-the-air.
+	The second thief is close by the car they want to steal.
+	The thieves carry their antennas close to the car and the CID so that the vehicle will open
+	and the engine ignites.
+	Without notice both thieves can get away then.
+
+%ODB-II
+	Gaining access to a vehicle has further implications for the overall security of a car.
 	Stealing the car is the straightforward approach,
 	but in combination with attacks on the cars internal electronic system,
 	malvolent attacks on the vehicle and its passenger are possible.
