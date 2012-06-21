@@ -58,7 +58,7 @@
 	and the tested approaches by the authors.
 
 %Over the Cable
-	\begin{figure*}[htb]
+	\begin{figure*}[t]
 		\begin{center}
 			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_wire.png}
 		\end{center}
@@ -76,7 +76,7 @@
 	the quality of the antennas and the strength of the signal.
 
 %Over the air
-	\begin{figure*}[htb]
+	\begin{figure*}[t]
 		\begin{center}
 			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_air.png}
 		\end{center}
@@ -130,8 +130,39 @@
 	If the signals were relayed 60m,
 	six out of ten cars could opened and started.
 	Three of these six did not require an amplification of the signal.
+	The missing cars were not tested by the authors in these distances.
 
 %relay distance CID antenna
+	\citeauthor{relayAttacks} also tested the maximum distance from the relaying antenna to the CID.
+	Without amplification amplification the shortest maximum distance to allow the opening of the vehicle was 10 cm,
+	the largest was 2.5 meters.
+	To start the engine the lowest distance was 10 cm and the longest distance was 2.4 meters.
+	With amplification of the signal the lowest distance was 2.4 m to start and to ignite the engine.
+	These values were achieved on a car where the distance for opening and starting the engine were 10 cm
+	without amplifying the signal.
+	The Maximum distance achieved to open and start the engine achieved,
+	was 8 meters
+	
+	\begin{table*}[t]
+		\centering
+		\begin{tabular}{ p{2.6cm} r l r l r l}
+			\toprule
+			Car model	&	\multicolumn{2}{l}{Maximum Delay}	&	\multicolumn{2}{l}{Key Response (std dev)}	&	\multicolumn{2}{l}{Key Response Time Spread}\\
+			\midrule
+					1 		&	500 			&\textmu s	&	1782  &	\textmu s		(\textpm 8)	&	21		&\textmu s \\
+					2 		&	5000			& \textmu s	&	11376 & \textmu s  (\textpm 15)		&	47		&\textmu s \\
+					4 		&	500 			&\textmu s	&	-		&										&	- 		&	\\
+					5 		&	1000			& \textmu s	&	5002	& \textmu s  	(\textpm 4)		&	11		&\textmu s \\
+					6 		&	10000-20000	& \textmu s	&	23582 & \textmu s 	 (\textpm 196)	&	413	&	\textmu s \\
+					7 		&	620 			&\textmu s	&	1777	& \textmu s  	(\textpm 12)	&	25		&\textmu s \\
+					8 		&	620 			&\textmu s	&	437	& \textmu s  	(\textpm 70)	&	162	&	\textmu s \\
+					9 		&	2000			& \textmu s	&	1148	& \textmu s  	(\textpm 243)	&	436	&	\textmu s \\
+					10 	&	35 			& \textmu s	&	2177	&\textmu s  	(\textpm 8		&	12		&\textmu s \\
+			\bottomrule
+		\end{tabular}
+		\caption{Experimentally tested maximum delay, key response time and spread per model, from \cite{relayAttacksFranc}}
+		\label{tab:francTimings>}
+	\end{table*}
 
 \subsection*{Implications}
 % "The Supermarket"
