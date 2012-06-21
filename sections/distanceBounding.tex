@@ -1,11 +1,46 @@
 %Section on Distance bounding protocols
 
 \subsection{Introduction}
-
 	These protocols were designed to ensure an upper bound for a distance between to entities.
 	They were introduced by \citeauthor{distanceBoundingProtocols}.
 	Distance bounding protocols were evaluated by \citeauthor{secPos}.
-	They discribe a protocol implements this upper bounding.
-	Although this 
+	They discribe a protocol that implements this upper bounding for localization in wireless networks.
+	The authors emphasize that their proposed protocol is very well suited to determine the distance,
+	as it is quite accurate and that it is very secure.
+	Although distance bounding means,
+	that it can only ensure a certain minimum distance between the devices.
+	An attacker could give fool the devices that they are more far away from each other.
+	
+\subsection{Method}
+	The distance bounding protocol as described by \citeauthor{secPos}
+	bases on the time-of-flight for electromagnetic waves which travel at the speed of light.
+	The devices implementing this distance bounding protcols are required to operate very fast.
+	Otherwise the postion information will not be very accurate.
+	As the speed of light is a curcial constant,
+	if the device takes only one nanosecond longer,
+	the distance will be uncertain by about 30 cm.
+	Hardware that allows this kind of processing speed is available for the Ultra Wide Band.
+	The range of these devices and their physical properties,
+	like weight and size would be suitable for PKE Systems.
+
+	The protcol could implement a PKE system in the following manner:
+	The vehicle permanently sends out a signal,
+	which might be recieved by the CID.
+	The signal does not need to be secure in any way,
+	it could even be relayed by an attacker.
+	This signal is just used to initiate the protocol.
+	The CID will the start by sending a random nonce to the vehicle
+	and there by initiate the distance bounding protocol.
+	The vehicle will the respond with a challenge nonce,
+	that is send to the CID in reversed bit order,
+	starting with the most significant bit.
+	As soon as the last bit is send a precise timer is started.
+	The CID then XORs its initiating nonce with the challenge nonce send by the vehicle.
+	The result will the be send in to the vehicle,
+	starting with the lowest significant bit.
+	When the XORed nonce is received the timer is stopped,
+	and the time is converted to a distance.
+	In a final step an authentication can be acquired using values commited from the CID nonce
+	and a shared key.
 
 % distance bounding as described in "secure positioning``/
