@@ -7,7 +7,7 @@ Although the amount of electronics in these key-systems has steadily increased o
 This enhanced security of cars and the ease of use,
 but also introduced security problems.
 
-\subsection*{Evolution of car keys}
+\subsection*{Evolution of car keysystems}
 	The Customer Identification Devices hast changed a lot in car history.
 	Starting from physical keys,
 	the access can be enforced now by electronics only.
@@ -20,9 +20,8 @@ but also introduced security problems.
 	after physical access to the cabin has been achieved.
 	The strength of the immobilisers was increased with more sophisticated cryptography.
 	Early models used simple checks against values stored in the cars electronic control unit (ECU).
-	The strength of immobilisers was increased by incorporating more
-	sophisticated cryptography,
-	that can withstand replay-attacks.	%explain replay?
+	The capabilities of immobilisers was increased by incorporating more
+	sophisticated cryptography.
 
 	Remote keyless entry systems feature a key that can send out a signal,
 	which opens the car if its sensor is in range.
@@ -31,16 +30,26 @@ but also introduced security problems.
 	which may incorporate an immobiliser.
 	These remote keyless entry systems work similar to immobiliser with a radio interface.
 	Likewise cryptography has to be applied to prevent replay attacks.
+	Otherwise replay attacks are easy to carry out,
+	as the attacker just can collect the signal send out by the owner
+	and replay it near the car to gain access.
 
-	Passive keyless entry (PKE) system omit the button.
-	They listen on a certain frequency for a message from the vehicle
+	Passive keyless entry (PKE) system omit the nescecarity to push a button.
+	The key listens on a certain frequency for a message from the vehicle
 	and reply if the message fits to initiate an authentication.
+	Other systems the car only emit a signal if the door handle is pulled.
 	When the authentication succeeds, the vehicle will unlock its doors.
 	Now the Customer does not have to press any buttons,
 	and will be able to enter the car without interaction 
 	if the identification device is close enough.
-	The customer identification device usually integrates a backup key,
-	to allow access when the battery is drained.
+	In side the car there are different signals send.
+	These are lower in range so that the key has to be inside the car.
+	Without having to put the key in a certain spot inside the vehicle,
+	the engine will start with the push of a button.
+	Working PKE system dont require any direct physical interaction between
+	a key and lock.
+	The customer identification device (CID) usually integrates a backup key,
+	to allow access when the battery is drained. 
 
 	This enhances the comfort but also introduces some security relevant aspects.
 	The vehicles security systems now have to be hardened
@@ -54,7 +63,6 @@ but also introduced security problems.
 	triangulation, there are some attacks that allow the alteration of the position.
 
 	%picture triangulation
-
 	Triangulation works by measuring the time it takes a signal to propagate
 	to different antennas.
 	Given a sufficient amount of antennas,
@@ -83,8 +91,6 @@ but also introduced security problems.
 	Some attacks are discribed by \citeauthor{wormhole}.	%TODO give example
 	They use the same underlying mechanisms, as the attacks on PKE Systems
 	and also base on the problem of proper localization in wireless networks.
-	Except the time it takes for the signal to propagate through the air,
-	there is nothing that clearly determines distance.
 
 %Structure	%TODO
-	In the Second Section Relay attacks and their effects will be discussed.
+
