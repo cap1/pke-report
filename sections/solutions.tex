@@ -6,13 +6,13 @@
 	Especially because of its implications on overall vehicle security as described in Section \ref{sec:attackImplications}.
 	Usually it is possible to disable the PKE system in the cars.
 	Access to the vehicle can be gained by a backup key system.
-	The CID usually encorporates a backup key so that disabling the PKE feature is possible.
+	The CID usually incorporates a backup key so that disabling the PKE feature is possible.
 	This of course lowers the ease of access.
 
 \subsection{Midterm \& Longterm}
 %improvement described in "Some attacks against vechicles pkes .. ."
 	In order to make attacks more difficult the manufactures could hard their systems.
-	\citeauthor{someAttacksPKES} elaborate som methods to harden PKE systems.
+	\citeauthor{someAttacksPKES} elaborate some methods to harden PKE systems.
 	They describe a Systems using communication in Radio Frequency (RF).
 	This kind of communication would introduce a feedback loop into the attackers relay systems.
 	The feedback loop could be easily detected by the PKE system so that access is prohibited.
@@ -22,25 +22,25 @@
 	To prevent this kind of attack,
 	\citeauthor{someAttacksPKES} propose a system with different signal strengths,
 	transmitted by the CID.
-	The vehicle can then check for the difference of the powerlevels of the incomming signal.
+	The vehicle can then check for the difference of the power levels of the incoming signal.
 	To deploy the \textsl{three thieves} attack,
 	the attackers have to approach the car from opposing directions to prevent a feedback loop.
 	By sending out a signal with different powerlevels,
 	it is much harder for the thieves to position themselves in the correct range.
-	Also the difference of the powerlevels could be altered,
-	if amplification, downconversion and upconversion are not implemented exactly.
+	Also the difference of the power levels could be altered,
+	if amplification, down-conversion and up-conversion are not implemented exactly.
 
 %GPS for localization
-	Other methods could be applied to ensure the correct localiation of the key.
-	Modern cars that incorporate a PKE System also include a satelite navigation system,
+	Other methods could be applied to ensure the correct localization of the key.
+	Modern cars that incorporate a PKE System also include a satellite navigation system,
 	which usually use the Global Positioning System (GPS) to determine their location.
 	The PKE could make use of the positioning information gained from the GPS system.
-	Althogh this requires the CID to also be able to determine its location by GPS.
+	Although this requires the CID to also be able to determine its location by GPS.
 	If the CID and the vehicle can communicate in a secure manner,
 	this could be used for localization.
 	Although battery lifetime and size of the CID would reduce the practicability of this system
-	and the the system might not work in undergound parking lots.
-	The CID might be integrated in a Smartphone,
+	and the the system might not work in underground parking lots.
+	The CID might be integrated in a smartphone,
 	which usually incorporate a GPS device.
 	Systems based on GPS could also be attacked,
 	as pointed out by \cite{someAttacksPKES},
@@ -54,7 +54,8 @@
 	the attacker can only fool the protocol into believing that he is farer away from the
 	vehicle than he actually is.
 	This is obviously not helpful fur his attack.
-	Although it seems difficult for the manufacterers to implement those systems,
+	Although it seems difficult for the manufacturers to implement those systems,
 	as distance bounding protocols have been introduced more than 15 years ago  \cite{distanceBoundingProtocols}.
-	It 
+	The reasons might be that the necessary devices could not be build in an acceptable
+	size or with a battery time that is long enough.
 	

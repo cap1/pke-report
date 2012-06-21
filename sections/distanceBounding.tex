@@ -14,18 +14,18 @@
 \subsection{Method}
 	The distance bounding protocol as described by \citeauthor{secPos}
 	bases on the time-of-flight for electromagnetic waves which travel at the speed of light.
-	The devices implementing this distance bounding protcols are required to operate very fast.
-	Otherwise the postion information will not be very accurate.
-	As the speed of light is a curcial constant,
+	The devices implementing this distance bounding protocols are required to operate very fast.
+	Otherwise the position information will not be very accurate.
+	As the speed of light is a crucial constant,
 	if the device takes only one nanosecond longer,
 	the distance will be uncertain by about 30 cm.
 	Hardware that allows this kind of processing speed is available for the Ultra Wide Band.
 	The range of these devices and their physical properties,
 	like weight and size would be suitable for PKE Systems.
 
-	The protcol could implement a PKE system in the following manner:
+	The protocol could implement a PKE system in the following manner:
 	The vehicle permanently sends out a signal,
-	which might be recieved by the CID.
+	which might be received by the CID.
 	The signal does not need to be secure in any way,
 	it could even be relayed by an attacker.
 	This signal is just used to initiate the protocol.
@@ -40,16 +40,16 @@
 	starting with the lowest significant bit.
 	When the XORed nonce is received the timer is stopped,
 	and the time is converted to a distance.
-	In a final step an authentication can be acquired using values commited from the CID nonce
+	In a final step an authentication can be acquired using values committed from the CID nonce
 	and a shared key.
 
 \subsection{Implications}
 	\label{sec:DBimp}
-	This Protocol relies on the rapid processing and the correct meassuring of time.
+	This Protocol relies on the rapid processing and the correct measuring of time.
 	If the time to reply with the correct XORed message is too long the authentication
-	can be omited and the sender of this signal can be considered an attacker.
+	can be omitted and the sender of this signal can be considered an attacker.
 	By adjusting the maximum time allowed,
-	ist is possible to determine the maximum distance for the vehicle to open
+	it is possible to determine the maximum distance for the vehicle to open
 	or ignite its engine.
 	The protocol is secure,
 	due to the fact that an attacker would always add time.

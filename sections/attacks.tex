@@ -17,15 +17,14 @@
 	This method has been practically tested on different PKE systems by \cite{relayAttacksFranc}. %TODO \citea{} %DER Artikel
 	The authors show that it is an easy and feasible attack.
 	It also does not require very specialized hard- or software and
-	the required components can be easily aquired with a relatively small budget.
-	The relay attack is transarparent to any higher layer cryptography,	%transport layer?
+	the required components can be easily acquired with a relatively small budget.
+	The relay attack is transparent to any higher layer cryptography,	%transport layer?
 	and so it can easily circumvent the security systems of most PKE systems.
 
 \subsubsection*{Variants}
 	There are some variants in attacking PKE systems.
-	Altough the attack could be in principle be carried out by one attacker alone,
-	the literature usually asumes at least two attackers.
-
+	Although the attack could be in principle be carried out by one attacker alone,
+	the literature usually assumes at least two attackers.
 
 %two thieves
 	\label{par:twoThieves}
@@ -34,7 +33,7 @@
 	The first thieves will try to get close to the victim and place
 	the sending device close to the victims CID.
 	This could take place in a store,
-	where it doesnt raise attention to the victim if the attacker
+	where it does not raise attention to the victim if the attacker
 	is in range of the CID.
 	The second thief will be near the car,
 	probably parked on the stores own carlot,
@@ -47,12 +46,12 @@
 %three thieves	
 	\label{par:threeThieves}
 	\citeauthor{someAttacksPKES} also describe an attack carried out by three thieves.
-	This more complicate attack involves using seperate frequencies to transmit the signals
+	This more complicate attack involves using separate frequencies to transmit the signals
 	from the vehicle to the CID and vice versa.
 	The attack is not vulnerable to the introduction of a feedback loop,
 	because thief 1 and thief 3 approach the vehicle from opposite directions,
 	so that they do not pick up the signals emitted from their relaying antennas.
-	Thief 2 is near the CID to pick up and relay the signals to theif 1 and 3.
+	Thief 2 is near the CID to pick up and relay the signals to thief 1 and 3.
 
 %Over the Cable
 	\begin{figure*}[ht!]
@@ -72,10 +71,10 @@
 	Relay  attacks on PKE systems can be carried out in different ways.
 	In the most simple case,
 	a cable is used to relay the transmitted LF signal from the car near the CID.
-	An Amplifier might be needed to keep the signal stron enough.
+	An Amplifier might be needed to keep the signal strong enough.
 	The keys UHF sender is strong enough so that the car will receive the send out signals.
 	This case is shown in Figure \ref{fig:relayOTW}.
-	Amplifiers might be nesscessary deping on the length of the cable,
+	Amplifiers might be necessary depending on the length of the cable,
 	the quality of the antennas and the strength of the signal.
 
 %Over the air
@@ -88,11 +87,11 @@
 	\end{figure*}
 
 	A cable is rather impractical to relay the signal.
-	\citeauthor{relayAttacksFranc} used upconversion and downconversion to realy the signal.
-	The 130 kHz signal transimetted by the car is amplified and upconverted to a 2.5 GHz signal.
-	This signal is send out to a 2.5 GHz antenna and downmodulated to 130 KHz again.
+	\citeauthor{relayAttacksFranc} used up-conversion and down-conversion to relay the signal.
+	The 130 kHz signal transmitted by the car is amplified and up-converted to a 2.5 GHz signal.
+	This signal is send out to a 2.5 GHz antenna and down-modulated to 130 KHz again.
 	Amplifiers are used as required by signal strength and quality.
-	The conversion steps are down analog,
+	The conversion steps are down analogue,
 	to ensure a fast conversion rate.
 	Also this keeps the attack simple and inexpensive.
 	Figure \ref{fig:relayOTA} show the layout of the Relay over-the-air attack.
@@ -102,36 +101,36 @@
 %Distance to CID
 	In addition the \citeauthor{relayAttacksFranc} tested the maximum distance
 	the relaying antenna can have to the CID.
-	This Variable greatly determines the pracicability of the attack.
+	This Variable greatly determines the practicability of the attack.
 	If you have to get to close to the owner carrying his CID,
 	it may raise suspicion.
 
 %Timings
 	The PKE systems use a mechanism to discriminate between signals in time.
 	\citeauthor{relayAttacksFranc} tested the maximum delay that could be added
-	so that the relay attack would still be succesful.
+	so that the relay attack would still be successful.
 %Cars
-	\citeauthor{relayAttacksFranc} acqiured 10 distinct car models that have been build by 8 different manufacturers,
-	to test the raly attack in practice.
+	\citeauthor{relayAttacksFranc} acquired 10 distinct car models that have been build by 8 different manufacturers,
+	to test the relay attack in practice.
 	The cars were from different classes,
 	there were 4 executive or luxury class cars, 2 SUVs, a minivan and 2 cars in the compact class.
-	One of the cars had an aftermarket PKE systems.
+	One of the cars had an after market PKE systems.
 	The authors tried to attack these ten systems with both,
 	the over-the-air and the over-the-cable attack.
 
 \subsubsection*{Results}
 %results francillion et al. achieved with real world cars
-	The Authors were able to succesfully carry the attack out to various number of cars.
+	The Authors were able to successfully carry the attack out to various number of cars.
 	These models were tested if they were vulnerable against the two thieves attack as described in 
 	Section \ref{par:twoThieves}.
 	\citeauthor{relayAttacksFranc} were able to excite the CID from ranges up to 8 meters
-	and therefore open the car altough the car was more than 50 meters away.
+	and therefore open the car although the car was more than 50 meters away.
 
 %relay distance cable
 	All of the Cars could be opened and started using the relay over-the-cable attacks in a range of 7 Meters.
 	Except for one model,
-	all cars could be driven away with altough the CID was 30 meters away.
-	If the signals were relayed 60m,
+	all cars could be driven away with although the CID was 30 meters away.
+	If the signals were relayed 60 m,
 	six out of ten cars could opened and started.
 	Three of these six did not require an amplification of the signal.
 	The missing cars were not tested by the authors in these distances.
@@ -174,7 +173,7 @@
 \subsubsection*{Stealing}
 	\label{sec:attackImplications}
 	Relay attacks can be carried out by very simple devices,
-	and can be succesfully applied.
+	and can be successfully applied.
 	A typical scenario could be on a supermarket car lot.
 	Two thieves steal a car locked by a PKE system.
 	The owner carries his CID into the supermarket where the first thief gets close to him.
@@ -186,7 +185,7 @@
 
 	A very similar attack was tested by \citeauthor{relayAttacksFranc}.
 	The Authors were able to open and start a car using the relay-over-the-cable 
-	attack on a car parked in front of a buereau building.
+	attack on a car parked in front of a bureau building.
 	The CID was in bag close to the window,
 	so that amplification of the signal was enough to excite the key.
 	The car opened and the attackers were able to drive away.
@@ -196,16 +195,16 @@
 	Gaining access to a vehicle has further implications for the overall security of a car.
 	Stealing the car is the straightforward approach,
 	but in combination with attacks on the cars internal electronic system,
-	malvolent attacks on the vehicle and its passenger are possible.
+	malevolent attacks on the vehicle and its passenger are possible.
 
 	Modern vehicles are controlled by many small electronic computing units (ECU),
 	whom are interconnected over a bus system.
-	Prominent ECUs manage the engine, the breaks or the Electronic devices on the dasboard.
-	The more security relevant ECUs are connected via a priviledged,
+	Prominent ECUs manage the engine, the breaks or the Electronic devices on the dashboard.
+	The more security relevant ECUs are connected via a privileged,
 	high-speed bus,
-	where less important ones use a seperate lower-speed bus.
-	These bus-systems should be strictly seperate as specified in the standard. %TODO cite standard for OMB-II
-	Seperating the communication of the brakes and windscreenwipers,
+	where less important ones use a separate lower-speed bus.
+	These bus-systems should be strictly separate as specified in the standard. %TODO cite standard for OMB-II
+	Separating the communication of the brakes and windscreen wipers,
 	shall ensure that the integral systems keep working,
 	when it is acceptable that less important ones can fail.
 
@@ -216,20 +215,20 @@
 	They tested these attacks on a closed runway with
 	and were able to verify the results they gained on a jacks in a realistic setting.
 	Given access to the ODB-II port of the attacked car,
-	they were able to controll and shutdown ECUs.
+	they were able to control and shut down ECUs.
 	From less security relevant settings like honking the horn or
-	engaging the windescreen whipers to life threatening attacks were possible.
+	engaging the windscreen wipers to life threatening attacks were possible.
 
 	For example the engine ECU could be set in a special update mode,
 	which instantly cuts the engine even while driving.
 	This is an example for a major deviation from the standard,
 	which clearly states that this should not be possible under any given circumstances.
-	Another example is the possebility to engage the breaks on single wheels,
+	Another example is the possibility to engage the breaks on single wheels,
 	or increasing the engines RPM.
 
-	These lifethreatening attacks are possible on the car that \citeauthor{expModernAuto} tested.
+	These life threatening attacks are possible on the car that \citeauthor{expModernAuto} tested.
 	The authors also point out that,
-	it is not possible to traceback certain attacks,
-	as the ECUs can be reseted.
+	it is not possible to trace back certain attacks,
+	as the ECUs memory can be erased.
 
 	%what harm can occur from gaining unnotices acces to the vehicle
