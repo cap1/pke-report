@@ -166,6 +166,7 @@
 
 \subsection*{Implications}
 % "The Supermarket"
+\subsubsection*{Stealing}
 	\label{sec:attackImplications}
 	Relay attacks can be carried out by very simple devices,
 	and can be succesfully applied.
@@ -178,7 +179,15 @@
 	and the engine ignites.
 	Without notice both thieves can get away then.
 
+	A very similar attack was tested by \citeauthor{relayAttacksFranc}.
+	The Authors were able to open and start a car using the relay-over-the-cable 
+	attack on a car parked in front of a buereau building.
+	The CID was in bag close to the window,
+	so that amplification of the signal was enough to excite the key.
+	The car opened and the attackers were able to drive away.
+
 %ODB-II
+	\subsubsection*{Flaws in car security}
 	Gaining access to a vehicle has further implications for the overall security of a car.
 	Stealing the car is the straightforward approach,
 	but in combination with attacks on the cars internal electronic system,
@@ -197,9 +206,25 @@
 
 	However the article form \citeauthor{expModernAuto}
 	shows that these security features and the standards were not implemented as intended.
-	The authors also show what can be done if access to the electronic bus system can be achieved.
-	They were able to cut the engine and the engage single brakes,
-	even while driving.
-	\citeauthor{expModernAuto} point out that it is not possible to traceback certain attacks.	%verify that
+	The authors also show what can be done,
+	if access to the electronic bus system can be achieved.
+	They tested these attacks on a closed runway with
+	and were able to verify the results they gained on a jacks in a realistic setting.
+	Given access to the ODB-II port of the attacked car,
+	they were able to controll and shutdown ECUs.
+	From less security relevant settings like honking the horn or
+	engaging the windescreen whipers to life threatening attacks were possible.
+
+	For example the engine ECU could be set in a special update mode,
+	which instantly cuts the engine even while driving.
+	This is an example for a major deviation from the standard,
+	which clearly states that this should not be possible under any given circumstances.
+	Another example is the possebility to engage the breaks on single wheels,
+	or increasing the engines RPM.
+
+	These lifethreatening attacks are possible on the car that \citeauthor{expModernAuto} tested.
+	The authors also point out that,
+	it is not possible to traceback certain attacks,
+	as the ECUs can be reseted.
 
 	%what harm can occur from gaining unnotices acces to the vehicle
