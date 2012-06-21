@@ -3,6 +3,7 @@
 \subsection{Relayattacks}
 \label{sec:relayAttacks}
 \subsubsection*{Idea}
+
 %Describe attack idea
 	As described before relay attacks base on the problem of localization in
 	wireless networks.
@@ -24,6 +25,7 @@
 	There are some variants in attacking PKE systems.
 	Altough the attack could be in principle be carried out by one attacker alone,
 	the literature usually asumes at least two attackers.
+
 
 %two thieves
 	\label{par:twoThieves}
@@ -52,19 +54,20 @@
 	so that they do not pick up the signals emitted from their relaying antennas.
 	Thief 2 is near the CID to pick up and relay the signals to theif 1 and 3.
 
-\subsubsection*{Material \& Methods}
-	\label{sec:matmet}
-	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
-	and the tested approaches by the authors.
-
 %Over the Cable
-	\begin{figure*}[t]
+	\begin{figure*}[ht!]
 		\begin{center}
 			\includegraphics[width=\textwidth]{pictures/franc_relay_over_the_wire.png}
 		\end{center}
 		\caption{Relay wih antennas, cable and amplifiers \citep[p. 5]{relayAttacksFranc}.}
 		\label{fig:relayOTW}
 	\end{figure*}
+
+
+\subsubsection*{Material \& Methods}
+	\label{sec:matmet}
+	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
+	and the tested approaches by the authors.
 
 	Relay  attacks on PKE systems can be carried out in different ways.
 	In the most simple case,
@@ -83,6 +86,7 @@
 		\caption{Relay over-the-air with up- and downconversion and amplifiers \citep[p. 6]{relayAttacksFranc}.}
 		\label{fig:relayOTA}
 	\end{figure*}
+
 	A cable is rather impractical to relay the signal.
 	\citeauthor{relayAttacksFranc} used upconversion and downconversion to realy the signal.
 	The 130 kHz signal transimetted by the car is amplified and upconverted to a 2.5 GHz signal.
@@ -133,7 +137,7 @@
 	The missing cars were not tested by the authors in these distances.
 
 %relay distance CID antenna
-	\citeauthor{relayAttacks} also tested the maximum distance from the relaying antenna to the CID.
+	\citeauthor{relayAttacksFranc} also tested the maximum distance from the relaying antenna to the CID.
 	Without amplification amplification the shortest maximum distance to allow the opening of the vehicle was 10 cm,
 	the largest was 2.5 meters.
 	To start the engine the lowest distance was 10 cm and the longest distance was 2.4 meters.
