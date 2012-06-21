@@ -43,4 +43,20 @@
 	In a final step an authentication can be acquired using values commited from the CID nonce
 	and a shared key.
 
+\subsection{Implications}
+	\label{sec:DBimp}
+	This Protocol relies on the rapid processing and the correct meassuring of time.
+	If the time to reply with the correct XORed message is too long the authentication
+	can be omited and the sender of this signal can be considered an attacker.
+	By adjusting the maximum time allowed,
+	ist is possible to determine the maximum distance for the vehicle to open
+	or ignite its engine.
+	The protocol is secure,
+	due to the fact that an attacker would always add time.
+	The additional time needed for processing and amplification 
+	to relay the signal can be detected by the distance bounding protocol
+	and access would be prohibited.
+	
+	
+	
 % distance bounding as described in "secure positioning``/
