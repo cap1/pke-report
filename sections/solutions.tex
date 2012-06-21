@@ -9,16 +9,27 @@
 	The CID usually encorporates a backup key so that disabling the PKE feature is possible.
 	This of course lowers the ease of access.
 
-\subsection{Midterm}
+\subsection{Midterm \& Longterm}
 %improvement described in "Some attacks against vechicles pkes .. ."
 	In order to make attacks more difficult the manufactures could hard their systems.
 	\citeauthor{someAttacksPKES} elaborate som methods to harden PKE systems.
 	They describe a Systems using communication in RF.
 	This kind of communication would introduce a feedback loop into the attackers relay systems.
 	The feedback loop could be easily detected by the PKE system so that access is prohibited.
-	Although the the authors also present an attack with \textsl{three thieves} that could still
+	Although the the authors also present an attack with \textsl{three thieves}
+	as described in Section \ref{par:threeThieves}, that could still
 	carry out the attack.
+	To prevent this kind of attack,
+	\citeauthor{someAttacksPKES} propose a system with different signal strengths,
+	transmitted by the CID.
+	The vehicle can then check for the difference of the powerlevels of the incomming signal.
+	To deploy the \textsl{three thieves} attack,
+	the attackers have to approach the car from opposing directions to prevent a feedback loop.
+	By sending out a signal with different powerlevels,
+	it is much harder for the thieves to position themselves in the correct range.
+	Also the difference of the powerlevels could be altered,
+	if amplification, downconversion and upconversion are not implemented exactly.
 
-\subsection{Longterm}
+	
 
 % distance bounding as described in "secure positioning``/
