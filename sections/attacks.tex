@@ -23,7 +23,7 @@
 \subsubsection*{Variants}
 	There are some variants in attacking PKE systems.
 	Altough the attack could be in principle be carried out by one attacker alone,
-	the literature usually asumes at leats two attackers.
+	the literature usually asumes at least two attackers.
 
 %two thieves
 	\label{par:twoThieves}
@@ -38,11 +38,20 @@
 	probably parked on the stores own carlot,
 	to capture its probing signals.
 
-	Now the signals are relayed between the CID and the car,
+	Now the signals are relayed between the CID and thse car,
 	and the car might open and start,
 	allowing the second thiee to drive away.
+	
+%three thieves	
+	\label{par:threeThieves}
+	\citeauthor{someAttacksPKES} also describe an attack carried out by three thieves.
+	This more complicate attack involves using seperate frequencies to transmit the signals
+	from the vehicle to the CID and vice versa.
+	The attack is not vulnerable to the introduction of a feedback loop,
+	because thief 1 and thief 3 approach the vehicle from opposite directions,
+	so that they do not pick up the signals emitted from their relaying antennas.
+	Thief 2 is near the CID to pick up and relay the signals to theif 1 and 3.
 
-%three thieves
 \subsubsection*{Material \& Methods}
 	\label{sec:matmet}
 	This Section refers to the publication of \citeauthor{relayAttacksFranc} from \citeyear{relayAttacksFranc}
@@ -157,7 +166,7 @@
 
 	However the article form \citeauthor{expModernAuto}
 	shows that these security features and the standards were not implemented as intended.
-	\citeauthor{expModernAuto} show what can be done if access to the electronic bus system can be achieved.
+	The authors also show what can be done if access to the electronic bus system can be achieved.
 	They were able to cut the engine and the engage single brakes,
 	even while driving.
 	\citeauthor{expModernAuto} point out that it is not possible to traceback certain attacks.	%verify that
